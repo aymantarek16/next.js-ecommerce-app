@@ -1,0 +1,101 @@
+// import Roboto from Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    max-width: 1100px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px , 1fr));
+    gap: 3rem;
+    padding: 30px 0;
+    @media (min-width: 550px) and (max-width: 768px) {
+      grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  .sectionTitle{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 30px auto;
+    box-shadow: inset -2px -2px 2px #ccc;
+    width: fit-content;
+    padding: 10px 20px;
+    animation: fadeIn 1.5s infinite linear;
+    @keyframes fadeIn {
+      0%,100% {
+        transform: scale(0.9);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      
+    }
+    @media screen and (max-width: 300px) {
+      font-size: 1.5rem;
+    }
+  }
+  .btn{
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s ease;
+    &:hover{
+      background-color: #333;
+      color: #fff;
+    }
+    
+  }
+}
+
+
+// About Us Page
+.aboutStyle{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 20px;
+  .paragAbout{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    
+  }
+}

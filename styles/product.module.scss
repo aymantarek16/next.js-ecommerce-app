@@ -1,0 +1,10 @@
+.product{
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    &:hover{
+        box-shadow: 2px 2px 1px #ccc;
+        transform: scale(1.1);
+    }
+}

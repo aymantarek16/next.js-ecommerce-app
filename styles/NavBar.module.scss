@@ -1,0 +1,51 @@
+// ======================================= NavBar Styling ======================================= //
+@mixin shadow_padding {
+  padding: 20px 0;
+  box-shadow: 2px 1px 1px #ccc;
+}
+@mixin navChild {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    ul {
+      display: flex;
+      li {
+        margin-left: 30px;
+        a {
+          color: rgb(87, 86, 86);
+          padding: 10px 15px;
+          transition: all 0.3s ease;
+          @media screen and (max-width: 768px) {
+            padding: 10px 5px;
+          }
+          &.active {
+            background-color: rgb(87, 86, 86);
+            color: #fff;
+            font-weight: 700;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  @include shadow_padding;
+  transition: height 0.4s ease;
+  @include navChild;
+}
+
+.nav2 {
+  @include shadow_padding;
+  position: fixed;
+  top: -75px;
+  left: 0;
+  right: 0;
+  transform: translateY(75px);
+  transition: transform 0.5s ease;
+  z-index: 9999;
+  background-color: #fff;
+  @include navChild;
+}
